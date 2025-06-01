@@ -11,3 +11,10 @@ let isloggedin = 1
 let booleanlogged = Boolean(isloggedin)  //true  
 console.log(booleanlogged)
 console.log(typeof booleanlogged)
+
+// operations  
+console.log("1"+2+2) //122  string ya number jo pehle aega baad me usko waise hi treat kiya jayega
+console.log(1+2+"3") //33
+
+//strict checking using "===" -- check values as well as datatypes
+console.log("2" === 2) //false
