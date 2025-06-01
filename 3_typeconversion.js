@@ -1,3 +1,5 @@
+//datatypes documentation and summary https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures
+
 let score = "33"
 console.log(typeof score) //string
 
