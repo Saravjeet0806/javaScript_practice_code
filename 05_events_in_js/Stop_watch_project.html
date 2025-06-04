@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch Example using js</title>
+</head>
+
+<body>
+    <h1>Stop Watch</h1>
+    <div class="container " style="display: flex;">
+  <h3 id=>Time:-</h3>
+  <h3 id="timer">0</h3>
+</div>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+</body>
+<script> 
+    let time = 0;
+    let intervalID = null
+    const start = function(){
+        document.querySelector('#timer').innerHTML = `${time}`
+        time = time+1
+    }
+    function resetTime(){
+        time = 0
+        document.querySelector('#timer').innerHTML = `${time}`           
+        clearInterval(intervalID)
+        intervalID=null
+    }
+   
+    document.querySelector('#start').addEventListener('click', (e)=>{
+        if(intervalID) return; //dont start again if time is already running
+        console.log("start button clicked");
+        start(); //calling function again to avoid delay
+        
+        intervalID = setInterval(start, 1000)
+    })
+
+    document.querySelector('#stop').addEventListener('click', (e)=>{
+        console.log("Stop button clicked")
+        clearTimeout(intervalID)
+        intervalID=null
+    })
+    
+     document.querySelector('#reset').addEventListener('click', (e)=>{
+         console.log("reset button clicked")
+         resetTime()
+    })
+    
+
+
+</script>
+</html>

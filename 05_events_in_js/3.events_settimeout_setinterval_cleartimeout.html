@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Set timeout example</title>
+        </head>
+        <body>
+            <h1>Hello this is setInterval and settimeout Example</h1>
+            <ul>
+                <li>Potatos</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+                <li>Cabbage</li>
+            </ul>
+
+            <button id="stop">Stop</button>
+  
+        </body>
+        <script>
+            const sayHello = function(){
+                console.log("hello world");
+                
+            }
+            const changeText= function(){
+                document.querySelector('h1').innerHTML='Text has been changed'
+            }
+            const hello = setTimeout(sayHello, 2000)
+            const changeme = setTimeout(changeText, 4000)
+
+            document.querySelector('#stop').addEventListener('click', function(){
+                clearTimeout(changeme)
+                console.log("stop button clicked");
+                
+            })
+
+            
+
+            
+        </script>
+        
+</html>
