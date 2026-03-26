@@ -1,34 +1,29 @@
 const myObj = {
     name: "Saravjeet",
-    age: "19",
+    age: "20",
 
     getUserDetails: function(){
-        console.log(myObj.name)
-        console.log("username is",`${this.name}`)
+        console.log(this.name);
+        console.log("username is", this.name);
     }
 }
 
-console.log(myObj)
-console.log(myObj.getUserDetails())
+console.log(myObj);
+myObj.getUserDetails(); // don't wrap in console.log
 
-
-
-///**************/// constructor function in js -- always creates a new instance when an object is created
 
 function User(username, loginCount, isLoggedIn){
     this.username = username;
     this.loginCount = loginCount;
-    this.isLoggedIn = isLoggedIn
+    this.isLoggedIn = isLoggedIn;
 
     this.greeting = function(){
-        console.log(`Welcome ${this.username}`);  //refers to User context
-
+        console.log(`Welcome ${this.username}`);
     }
-
-    return this
 }
 
-const userOne = new User("Saravjeet", 12, true)
-const userTwo = new User("User2", 11, false)
-console.log(userOner);
+const userOne = new User("Saravjeet", 12, true);
+const userTwo = new User("User2", 11, false);
+
+console.log(userOne);
 console.log(userTwo);
