@@ -8,7 +8,7 @@ myArr.push(10)
 myArr.pop()
 //console.log(myArr)
 
-const myStr = myArr.join()
+const myStr = myArr.join() 
 //console.log(myStr) //string
 
 //slice and splice
